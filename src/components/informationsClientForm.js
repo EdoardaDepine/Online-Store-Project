@@ -2,6 +2,19 @@ import React from "react";
 import { Component } from "react";
 
 class InformationClientForm extends Component {
+  state = {
+    name: "",
+    cpf: "",
+    email: "",
+    phone: "",
+    cep: "",
+    adress: "",
+    complement: "",
+    number: "",
+    city: "",
+    cityState: "",
+  };
+
   render() {
     return (
       <>
