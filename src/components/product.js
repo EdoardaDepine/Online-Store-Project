@@ -22,13 +22,15 @@ class Product extends Component {
         <div className='containerProduct'>
           <img className='imgProduct' alt='imagem do produto' src={srcImage} />
           <p className='titleProduct'>{title}</p>
-          <p>Valor: R${price}</p>
+          <p className='valueProduct'>Valor: R${price}</p>
           <button onClick={this.addProduct} className='btn btn-outline-primary'>
             Adicionar ao carrinho de compras
           </button>
-          <Link to={`/product/${id}`} className='linkMoreDetails'>
-            + detalhes
-          </Link>
+          <button className='btn btn-warning'>
+            <Link to={`/product/${id}`} className='linkMoreDetails'>
+              + Detalhes
+            </Link>
+          </button>
         </div>
       </div>
     );

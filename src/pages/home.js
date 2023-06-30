@@ -53,7 +53,7 @@ class Home extends Component {
     const products = this.state.products;
 
     if (products === null)
-      return <p>Digite algum termo de pesquisa ou escolha uma categoria</p>;
+      return <p>Digite algum termo de pesquisa ou escolha uma categoria!</p>;
 
     if (products.length === 0) return <p>Nenhum produto foi encontrado!</p>;
     return (
