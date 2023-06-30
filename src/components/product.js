@@ -6,6 +6,13 @@ import {
 } from "../services/cartLocalStorage";
 
 class Product extends Component {
+  addProduct = () => {
+    const { product } = this.props;
+    const cartProducts = readCartProducts();
+    const result = cartProducts.find((p) => p.id === product.id);
+    if (!result) addProductInCart(product);
+  };
+
   render() {
     const { srcImage, title, price } = this.props;
     return (
