@@ -7,6 +7,13 @@ import Product from "../components/product";
 import Loading from "../components/loading";
 
 class Home extends Component {
+  state = {
+    inputSearch: "",
+    categories: [],
+    products: null,
+    isLoading: false,
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
