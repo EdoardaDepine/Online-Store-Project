@@ -15,6 +15,18 @@ class ProductDetails extends React.Component {
     isLoading: true,
   };
 
+  componentDidMount = async () => {
+    this.setState({ isLoading: true });
+    const {
+      match: {
+        params: { productId },
+      },
+    } = this.props;
+    const productDetailsAPI = await getProductsDetails(productId);
+    this.setState({ productDetails: productDetailsAPI });
+    this.setState({ isLoading: false });
+  };
+
   addProduct = () => {
     const { productDetails } = this.state;
     const cartProducts = readCartProducts();
