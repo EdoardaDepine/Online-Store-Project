@@ -13,6 +13,26 @@ class Categorie extends Component {
     isLoading: false,
   };
 
+  productsListCategorie = () => {
+    const products = this.state.products;
+    if (products != null)
+      return (
+        <div>
+          {products.results.map((product) => (
+            <div className='cardProduct' key={product.id}>
+              <Product
+                srcImage={product.thumbnail}
+                title={product.title}
+                price={product.price}
+                product={product}
+              />
+              <Link to={`/product/${product.id}`}>+ detalhes</Link>
+            </div>
+          ))}
+        </div>
+      );
+  };
+
   onCLickButtonHome = () => {
     this.props.history.push("/");
   };
