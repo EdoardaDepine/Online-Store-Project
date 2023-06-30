@@ -12,6 +12,14 @@ class CheckoutProducts extends Component {
     totalValueItens: "",
   };
 
+  componentDidMount = () => {
+    this.setState({ isLoading: true });
+    const cartItensLocalStorage = getProductsCart();
+    this.setState({ cartItens: cartItensLocalStorage });
+    this.setState({ isLoading: false });
+    this.setState({ totalValueItens: this.totalValueItensCart() });
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
