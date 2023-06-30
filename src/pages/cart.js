@@ -6,6 +6,11 @@ import { getProductsCart } from "../services/cartLocalStorage";
 import Quantity from "../components/quantity";
 
 class Cart extends Component {
+  state = {
+    productsCartList: "",
+    isLoading: false,
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
