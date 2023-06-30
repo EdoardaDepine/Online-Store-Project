@@ -6,6 +6,12 @@ import Loading from "../components/loading";
 import InformationClientForm from "../components/informationsClientForm";
 
 class CheckoutProducts extends Component {
+  state = {
+    cartItens: [],
+    isLoading: false,
+    totalValueItens: "",
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
