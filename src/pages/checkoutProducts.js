@@ -20,6 +20,24 @@ class CheckoutProducts extends Component {
     this.setState({ totalValueItens: this.totalValueItensCart() });
   };
 
+  exibitionProductsCart = () => {
+    const { cartItens } = this.state;
+    if (cartItens.length === 0)
+      return <p>Seu carrinho de compras está vazio!</p>;
+    return (
+      <div>
+        {cartItens.map((product) => (
+          <div key={product.id}>
+            <p>{product.title}</p>
+            <p>Preço: R${product.price}</p>
+            <p>Quantidade: {product.quantity}</p>
+            <img src={product.thumbnail} alt='imagem do produto' />
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
