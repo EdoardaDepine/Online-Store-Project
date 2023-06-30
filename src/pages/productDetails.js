@@ -10,6 +10,11 @@ import Loading from "../components/loading";
 import Quantity from "../components/quantity";
 
 class ProductDetails extends React.Component {
+  state = {
+    productDetails: "",
+    isLoading: true,
+  };
+
   render() {
     const { productDetails, isLoading } = this.state;
     return isLoading ? (
