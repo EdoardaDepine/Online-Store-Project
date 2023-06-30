@@ -4,6 +4,7 @@ import {
   addProductInCart,
   readCartProducts,
 } from "../services/cartLocalStorage";
+import "../style/product.css";
 
 class Product extends Component {
   addProduct = () => {
@@ -18,7 +19,7 @@ class Product extends Component {
     return (
       <div>
         <img alt='imagem do produto' src={srcImage} />
-        <p>{title}</p>
+        <p className='title'>{title}</p>
         <p>Valor: R${price}</p>
         <button onClick={this.addProduct}>
           Adicionar ao carrinho de compras
