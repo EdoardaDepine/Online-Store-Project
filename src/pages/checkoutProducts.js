@@ -20,6 +20,20 @@ class CheckoutProducts extends Component {
     this.setState({ totalValueItens: this.totalValueItensCart() });
   };
 
+  totalValueItensCart = () => {
+    const productsCartListAPI = getProductsCart();
+    const allValuesItensList = productsCartListAPI.map((p) => {
+      const quantity = p.quantity;
+      const price = p.price;
+      const multiplicationValueByQuantity = Number(quantity) * Number(price);
+      return multiplicationValueByQuantity;
+    });
+    const sumAllProducts = allValuesItensList.reduce(function (total, price) {
+      return total + price;
+    }, 0);
+    return Number(sumAllProducts);
+  };
+
   exibitionProductsCart = () => {
     const { cartItens } = this.state;
     if (cartItens.length === 0)
