@@ -2,6 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
 import Home from "./pages/home.js";
+import Cart from "./pages/cart";
 
 class App extends React.Component {
   render() {
