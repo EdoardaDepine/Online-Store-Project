@@ -21,6 +21,14 @@ class Home extends Component {
     });
   };
 
+  onClickButtonSearch = async () => {
+    this.setState({ isLoading: true });
+    const productsAPI = await getProductsFromQuery(`${this.state.inputSearch}`);
+    this.setState({ products: productsAPI });
+    this.setState({ isLoading: false });
+    this.setState({ inputSearch: "" });
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
