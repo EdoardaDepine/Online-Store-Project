@@ -24,6 +24,28 @@ class Cart extends Component {
     this.props.history.push("/checkout");
   };
 
+  exibitionProducts = () => {
+    const { productsCartList } = this.state;
+    if (productsCartList.length === 0)
+      return <p>Seu carrinho de compras está vazio!</p>;
+    return (
+      <div>
+        {productsCartList.map((product) => (
+          <div key={product.id}>
+            <p>{product.title}</p>
+            <p>Preço: R${product.price}</p>
+            <img src={product.thumbnail} alt='imagem do produto' />
+            <Quantity
+              id={product.id}
+              intireProduct={product}
+              totalValueItensCart={this.totalValueItensCart}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
