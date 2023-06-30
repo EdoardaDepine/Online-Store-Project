@@ -17,6 +17,13 @@ class Quantity extends Component {
     product: {},
   };
 
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     const { id } = this.props;
     return (
