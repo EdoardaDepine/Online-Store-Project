@@ -3,6 +3,10 @@ import { Component } from "react";
 import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
 class CheckoutFinalized extends Component {
+  onCLickButtonHome = () => {
+    this.props.history.push("/");
+  };
+
   render() {
     return (
       <div>
