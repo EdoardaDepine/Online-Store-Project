@@ -33,6 +33,14 @@ class Home extends Component {
     this.setState({ inputSearch: "" });
   };
 
+  onClickButtonCategorie = ({ target }) => {
+    const categorie = this.state.categories.find(
+      (categorie) => categorie.id === target.value
+    );
+    const idCategorie = categorie.id;
+    this.props.history.push(`/categorie/${idCategorie}`);
+  };
+
   productsList = () => {
     const products = this.state.products;
 
