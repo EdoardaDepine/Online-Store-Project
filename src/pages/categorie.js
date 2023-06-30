@@ -13,6 +13,18 @@ class Categorie extends Component {
     isLoading: false,
   };
 
+  componentDidMount = async () => {
+    this.setState({ isLoading: true });
+    const {
+      match: {
+        params: { id },
+      },
+    } = this.props;
+    const categorieProducts = await getCategorieId(id);
+    this.setState({ products: categorieProducts });
+    this.setState({ isLoading: false });
+  };
+
   productsListCategorie = () => {
     const products = this.state.products;
     if (products != null)
