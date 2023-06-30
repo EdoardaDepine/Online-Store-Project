@@ -52,6 +52,10 @@ class CheckoutProducts extends Component {
     );
   };
 
+  onCLickButtonHome = () => {
+    this.props.history.push("/");
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
