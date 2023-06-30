@@ -3,6 +3,8 @@ import { Component } from "react";
 import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
 import Home from "./pages/home.js";
 import Cart from "./pages/cart";
+import Categorie from "./pages/categorie.js";
+import ProductDetails from "./pages/productDetails.js";
 
 class App extends React.Component {
   render() {
