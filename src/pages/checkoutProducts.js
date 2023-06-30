@@ -56,6 +56,10 @@ class CheckoutProducts extends Component {
     this.props.history.push("/");
   };
 
+  onCLickButtonCheckoutFinalized = () => {
+    this.props.history.push("/checkoutFinalized");
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
