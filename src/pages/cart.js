@@ -11,6 +11,11 @@ class Cart extends Component {
     isLoading: false,
   };
 
+  componentDidMount = () => {
+    const productsCartListAPI = getProductsCart();
+    this.setState({ productsCartList: productsCartListAPI });
+  };
+
   onClickButtonGoBackHome = () => {
     this.props.history.push("/");
   };
