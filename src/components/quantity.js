@@ -17,6 +17,25 @@ class Quantity extends Component {
     product: {},
   };
 
+  componentDidMount = () => {
+    const productsCartListLocalStorage = getProductsCart();
+    this.setState({ productsCartList: productsCartListLocalStorage });
+    const { id } = this.props;
+
+    if (productsCartListLocalStorage.length >= 1) {
+      const productLocalStorage = productsCartListLocalStorage.find(
+        (p) => p.id === id
+      );
+      if (productLocalStorage !== undefined) {
+        this.setState({ inputQuantity: productLocalStorage.quantity });
+        this.setState({ product: productLocalStorage });
+        if (productLocalStorage.quantity >= 1) {
+          this.setState({ buttonDisabled: false });
+        }
+      }
+    }
+  };
+
   alterationProductQuantity = (id, isAdd) => {
     const { intireProduct } = this.props;
     const cartProducts = readCartProducts();
