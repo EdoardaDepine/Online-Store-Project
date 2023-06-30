@@ -11,6 +11,10 @@ class Categorie extends Component {
     this.props.history.push("/");
   };
 
+  onCLickButtonCart = () => {
+    this.props.history.push("/cart");
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
