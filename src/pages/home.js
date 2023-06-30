@@ -14,6 +14,13 @@ class Home extends Component {
     isLoading: false,
   };
 
+  componentDidMount = async () => {
+    this.setState({ isLoading: true });
+    const categoriesAPI = await getCategories();
+    this.setState({ categories: categoriesAPI });
+    this.setState({ isLoading: false });
+  };
+
   handleChange = ({ target }) => {
     const { name, value } = target;
     this.setState({
