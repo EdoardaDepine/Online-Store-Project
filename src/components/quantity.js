@@ -9,6 +9,14 @@ import {
 } from "../services/cartLocalStorage";
 
 class Quantity extends Component {
+  state = {
+    productsCartList: [],
+    buttonDisabled: true,
+    inputQuantity: 0,
+    valueProductByQuantity: 0,
+    product: {},
+  };
+
   render() {
     const { id } = this.props;
     return (
