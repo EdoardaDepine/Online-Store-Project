@@ -15,6 +15,10 @@ class ProductDetails extends React.Component {
     isLoading: true,
   };
 
+  onCLickButtonHome = () => {
+    this.props.history.push("/");
+  };
+
   render() {
     const { productDetails, isLoading } = this.state;
     return isLoading ? (
