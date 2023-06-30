@@ -17,6 +17,15 @@ class Quantity extends Component {
     product: {},
   };
 
+  onClickButtonAddItem = (id) => {
+    this.alterationProductQuantity(id, true);
+    this.setState({ buttonDisabled: false });
+  };
+
+  onClickButtonRemoveItem = (id) => {
+    this.alterationProductQuantity(id, false);
+  };
+
   handleChange = ({ target }) => {
     const { name, value } = target;
     this.setState({
