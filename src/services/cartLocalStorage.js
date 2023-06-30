@@ -24,3 +24,8 @@ export const addProductInCart = (cartProducts) => {
     ? saveProductInCart([product])
     : saveProductInCart([...cartProductsLocalStorage, product]);
 };
+
+export const getProductsCart = () => {
+  const productsInCart = readCartProducts();
+  return productsInCart;
+};
