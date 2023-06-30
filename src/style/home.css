@@ -3,6 +3,13 @@
   flex-direction: row;
 }
 
+.btnCartInHome {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  gap: 0.8rem;
+}
+
 .categories {
   display: flex;
   flex-direction: column;
@@ -31,7 +38,7 @@
   max-width: 25rem;
 }
 
-.productsLIst {
+.productsList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
