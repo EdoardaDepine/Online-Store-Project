@@ -15,6 +15,13 @@ class ProductDetails extends React.Component {
     isLoading: true,
   };
 
+  addProduct = () => {
+    const { productDetails } = this.state;
+    const cartProducts = readCartProducts();
+    const result = cartProducts.find((p) => p.id === productDetails.id);
+    if (!result) addProductInCart(productDetails);
+  };
+
   onCLickButtonHome = () => {
     this.props.history.push("/");
   };
