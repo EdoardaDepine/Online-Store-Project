@@ -6,9 +6,9 @@ import Cart from "./pages/cart";
 import Categorie from "./pages/categorie.js";
 import ProductDetails from "./pages/productDetails.js";
 import CheckoutProducts from "./pages/checkoutProducts.js";
-import checkoutFinalized from "./pages/checkoutFinalized.js";
+import CheckoutFinalized from "./pages/checkoutFinalized.js";
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div className='App'>
@@ -25,7 +25,7 @@ class App extends React.Component {
             render={(propsRouter) => <ProductDetails {...propsRouter} />}
           />
           <Route path='/checkout' component={CheckoutProducts} />
-          <Route path='/checkoutFinalized' component={checkoutFinalized} />
+          <Route path='/checkoutFinalized' component={CheckoutFinalized} />
         </Switch>
       </div>
     );
