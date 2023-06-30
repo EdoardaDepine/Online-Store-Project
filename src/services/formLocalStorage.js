@@ -22,3 +22,8 @@ export const addEvaluationsInCart = (evaluation) => {
       : saveEvaluationsInCart([...cartEvaluations, evaluationItem]);
   }
 };
+
+export const getEvaluations = () => {
+  const evaluationsInCart = readEvaluations();
+  return evaluationsInCart;
+};
