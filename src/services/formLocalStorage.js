@@ -6,3 +6,6 @@ if (!JSON.parse(localStorage.getItem(EVALUATION_ITEM_FORM))) {
 
 const readEvaluations = () =>
   JSON.parse(localStorage.getItem(EVALUATION_ITEM_FORM));
+
+const saveEvaluationsInCart = (evaluations) =>
+  localStorage.setItem(EVALUATION_ITEM_FORM, JSON.stringify(evaluations));
