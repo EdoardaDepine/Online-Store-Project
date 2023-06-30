@@ -7,6 +7,10 @@ import Product from "../components/product.js";
 import Loading from "../components/loading";
 
 class Categorie extends Component {
+  onCLickButtonHome = () => {
+    this.props.history.push("/");
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
