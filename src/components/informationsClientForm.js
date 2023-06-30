@@ -15,6 +15,13 @@ class InformationClientForm extends Component {
     cityState: "",
   };
 
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     return (
       <>
