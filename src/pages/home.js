@@ -29,6 +29,30 @@ class Home extends Component {
     this.setState({ inputSearch: "" });
   };
 
+  productsList = () => {
+    const products = this.state.products;
+
+    if (products === null)
+      return <p>Digite algum termo de pesquisa ou escolha uma categoria</p>;
+
+    if (products.length === 0) return <p>Nenhum produto foi encontrado!</p>;
+    return (
+      <div>
+        {products.results.map((product) => (
+          <div key={product.id}>
+            <Product
+              srcImage={product.thumbnail}
+              title={product.title}
+              price={product.price}
+              product={product}
+            />
+            <Link to={`/product/${product.id}`}>+ detalhes</Link>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
