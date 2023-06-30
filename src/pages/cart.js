@@ -15,6 +15,10 @@ class Cart extends Component {
     this.props.history.push("/");
   };
 
+  onClickButtonCheckoutProducts = () => {
+    this.props.history.push("/checkout");
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
