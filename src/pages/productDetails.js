@@ -19,6 +19,10 @@ class ProductDetails extends React.Component {
     this.props.history.push("/");
   };
 
+  onCLickButtonCart = () => {
+    this.props.history.push("/cart");
+  };
+
   render() {
     const { productDetails, isLoading } = this.state;
     return isLoading ? (
