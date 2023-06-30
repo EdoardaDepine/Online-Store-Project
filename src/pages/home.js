@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+// import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { getCategories, getProductsFromQuery } from "../services/api";
 import Product from "../components/product";
 import Loading from "../components/loading";
@@ -65,8 +65,8 @@ class Home extends Component {
               title={product.title}
               price={product.price}
               product={product}
+              id={product.id}
             />
-            <Link to={`/product/${product.id}`}>+ detalhes</Link>
           </div>
         ))}
       </div>

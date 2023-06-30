@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import {
   addProductInCart,
   readCartProducts,
@@ -15,15 +16,20 @@ class Product extends Component {
   };
 
   render() {
-    const { srcImage, title, price } = this.props;
+    const { srcImage, title, price, id } = this.props;
     return (
-      <div>
-        <img alt='imagem do produto' src={srcImage} />
-        <p className='title'>{title}</p>
-        <p>Valor: R${price}</p>
-        <button onClick={this.addProduct}>
-          Adicionar ao carrinho de compras
-        </button>
+      <div className='productsList'>
+        <div className='containerProduct'>
+          <img className='imgProduct' alt='imagem do produto' src={srcImage} />
+          <p className='titleProduct'>{title}</p>
+          <p>Valor: R${price}</p>
+          <button onClick={this.addProduct} className='btn btn-outline-primary'>
+            Adicionar ao carrinho de compras
+          </button>
+          <Link to={`/product/${id}`} className='linkMoreDetails'>
+            + detalhes
+          </Link>
+        </div>
       </div>
     );
   }

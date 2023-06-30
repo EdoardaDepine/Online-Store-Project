@@ -1,0 +1,26 @@
+.productsList {
+  gap: 20rem;
+}
+
+.containerProduct {
+  width: 25em;
+  height: 25rem;
+  background-color: aqua;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border-radius: 0.5rem;
+  background-color: rgba(229, 230, 231, 0.478);
+  gap: 1rem;
+}
+
+.imgProduct {
+  width: 10rem;
+  height: 10rem;
+}
+
+.titleProduct {
+  max-height: 3rem;
+}
