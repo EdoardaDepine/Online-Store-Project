@@ -11,6 +11,10 @@ class Cart extends Component {
     isLoading: false,
   };
 
+  onClickButtonGoBackHome = () => {
+    this.props.history.push("/");
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
