@@ -5,6 +5,7 @@ import Home from "./pages/home.js";
 import Cart from "./pages/cart";
 import Categorie from "./pages/categorie.js";
 import ProductDetails from "./pages/productDetails.js";
+import CheckoutProducts from "./pages/checkoutProducts.js";
 
 class App extends React.Component {
   render() {
