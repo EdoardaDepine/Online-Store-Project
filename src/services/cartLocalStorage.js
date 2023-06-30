@@ -9,3 +9,18 @@ export const readCartProducts = () =>
 
 export const saveProductInCart = (cartProducts) =>
   localStorage.setItem(CART_ITEMS_KEY, JSON.stringify(cartProducts));
+
+export const addProductInCart = (cartProducts) => {
+  const product = {
+    title: cartProducts.title,
+    price: cartProducts.price,
+    thumbnail: cartProducts.thumbnail,
+    id: cartProducts.id,
+    quantity: 1,
+  };
+
+  const cartProductsLocalStorage = readCartProducts();
+  cartProductsLocalStorage.length === 0
+    ? saveProductInCart([product])
+    : saveProductInCart([...cartProductsLocalStorage, product]);
+};
