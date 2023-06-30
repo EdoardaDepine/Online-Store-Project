@@ -21,6 +21,10 @@ class Home extends Component {
     });
   };
 
+  onCLickButtonCart = () => {
+    this.props.history.push("/cart");
+  };
+
   onClickButtonSearch = async () => {
     this.setState({ isLoading: true });
     const productsAPI = await getProductsFromQuery(`${this.state.inputSearch}`);
