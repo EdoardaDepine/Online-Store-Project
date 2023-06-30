@@ -14,6 +14,13 @@ class Home extends Component {
     isLoading: false,
   };
 
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
