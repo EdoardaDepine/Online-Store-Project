@@ -29,3 +29,8 @@ export const getProductsCart = () => {
   const productsInCart = readCartProducts();
   return productsInCart;
 };
+
+export const removeProductById = (product) => {
+  const productsInCart = readCartProducts();
+  return saveProductInCart(productsInCart.filter((p) => p.id !== product.id));
+};
