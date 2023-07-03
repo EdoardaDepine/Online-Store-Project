@@ -7,6 +7,7 @@ import {
   saveProductInCart,
   readCartProducts,
 } from "../services/cartLocalStorage";
+import "../style/quantity.css";
 
 class Quantity extends Component {
   state = {
@@ -95,17 +96,24 @@ class Quantity extends Component {
     const { id } = this.props;
     return (
       <div>
-        <label>
+        <label className='containerQuantity'>
+          <button
+            onClick={() => this.onClickButtonAddItem(id)}
+            className='btn btn-outline-warning'
+          >
+            +
+          </button>
           <input
             onChange={this.handleChange}
             value={this.state.inputQuantity}
             type='number'
             name='itemQuantity'
+            className='form-control inputQuantity'
           ></input>
-          <button onClick={() => this.onClickButtonAddItem(id)}>+</button>
           <button
             disabled={this.state.buttonDisabled}
             onClick={() => this.onClickButtonRemoveItem(id)}
+            className='btn btn-outline-warning'
           >
             -
           </button>

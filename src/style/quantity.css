@@ -1,0 +1,8 @@
+.containerQuantity {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputQuantity {
+  width: 4rem;
+}
