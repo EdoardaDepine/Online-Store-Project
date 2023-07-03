@@ -1,0 +1,47 @@
+.containerPage {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnCartInHome {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  gap: 0.8rem;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: rgba(229, 230, 231, 0.478);
+  padding: 1.4rem;
+  min-width: 17rem;
+  max-width: 17rem;
+}
+
+.containerSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+.containerInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  align-content: center;
+  min-width: 25rem;
+  max-width: 25rem;
+}
+
+.productsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
