@@ -89,7 +89,8 @@ class CheckoutProducts extends Component {
           <p className='revisionProductsTitle'>Revise seus Produtos:</p>
           <div>{this.exibitionProductsCart()}</div>
           <p className='totalValueItens'>
-            Valor total do itens: R${this.state.totalValueItens}
+            Valor total do itens: R$
+            {Number(this.state.totalValueItens).toFixed(2)}
           </p>
           <InformationClientForm />
           <button
