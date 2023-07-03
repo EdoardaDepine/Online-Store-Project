@@ -92,7 +92,12 @@ class CheckoutProducts extends Component {
             Valor total do itens: R${this.state.totalValueItens}
           </p>
           <InformationClientForm />
-          <button onClick={this.onCLickButtonCheckoutFinalized}>Comprar</button>
+          <button
+            onClick={this.onCLickButtonCheckoutFinalized}
+            className='btn btn-warning'
+          >
+            Comprar
+          </button>
         </div>
       </div>
     );

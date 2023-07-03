@@ -1,0 +1,14 @@
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.containerUserInformations,
+.containerAdressInformations,
+.containerPaymentInformations,
+.containerTypeCard {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
