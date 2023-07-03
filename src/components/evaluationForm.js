@@ -4,6 +4,7 @@ import {
   addEvaluationsInCart,
   getEvaluations,
 } from "../services/formLocalStorage";
+import "../style/evaluationForm.css";
 
 class EvaluationForm extends Component {
   state = {
@@ -26,14 +27,18 @@ class EvaluationForm extends Component {
 
   exibitionEvaluations = () => {
     const { evaluations } = this.state;
-    if (evaluations.length === 0) return <p>Sem avaliações sobre o produto</p>;
+    if (evaluations.length === 0)
+      return (
+        <p className='noProductInCartText'>Sem avaliações sobre o produto!</p>
+      );
     return (
-      <div>
+      <div className='evaluations'>
         {evaluations.map((evaluation) => (
           <div key={evaluation.email}>
-            <p>Avaliação</p>
-            <p>Usuário:{evaluation.email}</p>
-            <p>{evaluation.message}</p>
+            <div className='evaluationCardUser'>
+              <p>Usuário: {evaluation.email}</p>
+              <p className='about'>Sobre: {evaluation.message}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -54,27 +59,37 @@ class EvaluationForm extends Component {
   render() {
     return (
       <>
-        <form>
-          <p>Avaliações do Produto:</p>
-          <label>
-            <input type='radio'></input>
-            <input type='radio'></input>
-            <input type='radio'></input>
-            <input type='radio'></input>
-            <input type='radio'></input>
-          </label>
-          <input
-            type='email'
-            placeholder='Email'
-            name='emailInput'
-            onChange={this.handleChange}
-          ></input>
-          <textarea
-            placeholder='Mensagem(opcional))'
-            name='messageInput'
-            onChange={this.handleChange}
-          ></textarea>
-          <button onClick={this.sendEvaluationLocalStorage}>Avaliar</button>
+        <form className='containerForm'>
+          <p className='title'>Avaliações do Produto:</p>
+          <div className='containerInputs'>
+            <label className='inputsRadio'>
+              Nota:
+              <input type='radio' className='form-check-input mt-0'></input>
+              <input type='radio' className='form-check-input mt-0'></input>
+              <input type='radio' className='form-check-input mt-0'></input>
+              <input type='radio' className='form-check-input mt-0'></input>
+              <input type='radio' className='form-check-input mt-0'></input>
+            </label>
+            <input
+              type='email'
+              placeholder='Email'
+              name='emailInput'
+              onChange={this.handleChange}
+              className='form-control'
+            ></input>
+            <textarea
+              placeholder='Mensagem(opcional)'
+              name='messageInput'
+              onChange={this.handleChange}
+              className='form-control'
+            ></textarea>
+            <button
+              onClick={this.sendEvaluationLocalStorage}
+              className='btn btn-primary'
+            >
+              Avaliar
+            </button>
+          </div>
         </form>
         <div className='evaluations'>{this.exibitionEvaluations()}</div>
       </>

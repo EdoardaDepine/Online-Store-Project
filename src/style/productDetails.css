@@ -1,6 +1,7 @@
 .containerDetails {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -45,7 +46,7 @@
 
 .cardProductDetails {
   width: 27em;
-  height: 40.9rem;
+  height: 42rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
