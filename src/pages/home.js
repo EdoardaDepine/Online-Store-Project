@@ -57,7 +57,7 @@ class Home extends Component {
 
     if (products.length === 0) return <p>Nenhum produto foi encontrado!</p>;
     return (
-      <div className='productsLIst'>
+      <div className='productsList'>
         {products.results.map((product) => (
           <div key={product.id}>
             <Product

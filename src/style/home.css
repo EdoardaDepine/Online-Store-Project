@@ -43,7 +43,5 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 1rem;
-  padding: 2rem;
   justify-content: center;
 }

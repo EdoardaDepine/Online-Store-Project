@@ -1,6 +1,5 @@
 import React from "react";
 import { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 import { getCategorieId } from "../services/api";
 import Product from "../components/product.js";
@@ -60,7 +59,7 @@ class Categorie extends Component {
       <Loading />
     ) : (
       <div className='containerCategorie'>
-        <div className='header'>
+        <div className='headerContainer'>
           <button
             onClick={this.onCLickButtonHome}
             className='btn btn-secondary btnHome'

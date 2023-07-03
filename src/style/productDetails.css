@@ -1,0 +1,99 @@
+.containerDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  justify-items: center;
+  background-color: rgb(50, 50, 205);
+  width: 100%;
+  height: 3rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.btnHome {
+  display: flex;
+  flex-direction: row;
+  width: 10rem;
+  height: 2.3rem;
+  justify-content: center;
+  justify-items: center;
+  gap: 0.8rem;
+}
+
+.btnCart {
+  display: flex;
+  flex-direction: row;
+  width: 15rem;
+  height: 2.3rem;
+  justify-content: center;
+  justify-items: center;
+  gap: 0.8rem;
+}
+
+.containerCardProductDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardProductDetails {
+  width: 27em;
+  height: 40.9rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border-radius: 0.5rem;
+  background-color: rgba(229, 230, 231, 0.478);
+  gap: 1rem;
+}
+
+.titleDetails {
+  max-height: 3rem;
+  font-size: 1.9rem;
+  max-height: 4rem;
+  font-weight: bold;
+}
+
+.title {
+  max-height: 3rem;
+  font-size: 1.4rem;
+  max-height: 4rem;
+  font-weight: bold;
+}
+
+.valueOriginal {
+  font-size: 1.4rem;
+  max-height: 1rem;
+}
+
+.valueActual {
+  font-weight: bold;
+  font-size: 1.4rem;
+  max-height: 1rem;
+  color: red;
+}
+
+.imgProductDetail {
+  width: 10rem;
+  height: 10rem;
+}
+
+.condition {
+  font-weight: bold;
+  font-size: 1rem;
+  max-height: 1rem;
+}
+
+.garanty {
+  font-size: 1rem;
+  max-height: 1rem;
+}
