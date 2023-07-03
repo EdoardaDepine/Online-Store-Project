@@ -21,9 +21,11 @@
 }
 
 .titleProduct {
-  max-height: 3rem;
-  font-size: 1.3rem;
-  max-height: 4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 15rem;
+  max-height: 2rem;
+  font-size: 1.2rem;
 }
 
 .valueProduct {
